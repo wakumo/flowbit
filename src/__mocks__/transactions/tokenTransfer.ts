@@ -3,7 +3,17 @@ import { MockTransaction } from './types';
 export const tokenTransfer: MockTransaction = {
   description: "ERC20 token transfer",
   trace: {
-    result: []
+    result: [{
+      action: {
+        from: "0xSender",
+        to: "0xTokenContract",
+        value: "0x0",
+        callType: "call",
+        gas: "0x7470c",
+        input: "0x"
+      },
+      type: "call"
+    }]
   },
   receipt: {
     result: {

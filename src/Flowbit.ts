@@ -16,12 +16,6 @@ export class Flowbit {
     console.log("Processing TXID:", txid);
 
     const [traceData, receiptData] = await this.fetchTransactionData(txid);
-
-    if (!traceData || traceData.length === 0) {
-      console.log("No trace data found.");
-      return [];
-    }
-
     console.log(`Trace Length: ${traceData.length}`);
 
     return analyzeTransaction(traceData, receiptData);
@@ -55,12 +49,22 @@ export class Flowbit {
       throw new Error(`HTTP error! status: ${res.status}`);
     }
 
-    const data = await res.json();
+    const responses = await res.json();
 
-    if (!Array.isArray(data) || !data[0].result || !data[1].result) {
-      throw new Error("Failed to fetch transaction data");
+    if (!Array.isArray(responses) || responses.length !== 2) {
+      throw new Error("Invalid response format");
     }
 
-    return [data[0].result, data[1].result];
+    const [traceResponse, receiptResponse] = responses;
+
+    if (traceResponse.jsonrpc !== "2.0" || !traceResponse.result) {
+      throw new Error("Failed to fetch trace data");
+    }
+
+    if (receiptResponse.jsonrpc !== "2.0" || !receiptResponse.result) {
+      throw new Error("Failed to fetch receipt data");
+    }
+
+    return [traceResponse.result, receiptResponse.result];
   }
 }

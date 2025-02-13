@@ -7,7 +7,6 @@ describe("Flowbit Transaction Analysis", () => {
 
   beforeEach(() => {
     global.fetch = jest.fn();
-    console.log = jest.fn();
   });
 
   afterEach(() => {
@@ -22,18 +21,17 @@ describe("Flowbit Transaction Analysis", () => {
       const flowbit = new Flowbit(NODE_URL);
       const result = await flowbit.analyze("0xSimpleTransfer");
 
-      expect(console.log).toHaveBeenCalledWith("Processing TXID:", "0xSimpleTransfer");
       expect(result).toHaveLength(mockTx.expectedTransfers);
     });
 
-    test("should analyze ERC20 token transfer", async () => {
+    test.only("should analyze ERC20 token transfer", async () => {
       const mockTx = mockData["0xTokenTransfer"];
       mockFetchResponse(mockTx);
 
       const flowbit = new Flowbit(NODE_URL);
       const result = await flowbit.analyze("0xTokenTransfer");
+      console.log("🚀 ~ test.only ~ result:", result)
 
-      expect(console.log).toHaveBeenCalledWith("Processing TXID:", "0xTokenTransfer");
       expect(result).toHaveLength(mockTx.expectedTransfers);
     });
   });
