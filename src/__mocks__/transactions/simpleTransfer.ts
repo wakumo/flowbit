@@ -22,5 +22,5 @@ export const simpleTransfer: MockTransaction = {
       logs: []
     }
   },
-  expectedTransfers: 1
+  expectedTransfers: 2
 };
