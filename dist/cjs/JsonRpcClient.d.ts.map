@@ -1,0 +1,1 @@
+{"version":3,"file":"JsonRpcClient.d.ts","sourceRoot":"","sources":["../../src/JsonRpcClient.ts"],"names":[],"mappings":"AAAA,OAAO,EAAkB,gBAAgB,EAAE,kBAAkB,EAAE,MAAM,SAAS,CAAC;AAO/E,qBAAa,aAAa;IACZ,OAAO,CAAC,QAAQ,CAAC,OAAO;gBAAP,OAAO,EAAE,MAAM;IAEtC,kBAAkB,CAAC,IAAI,EAAE,MAAM,GAAG,OAAO,CAAC,CAAC,gBAAgB,EAAE,EAAE,kBAAkB,CAAC,CAAC;IAMzF,OAAO,CAAC,6BAA6B;YAiBvB,YAAY;CAyB3B"}

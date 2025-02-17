@@ -64,3 +64,10 @@ export interface TransactionReceipt {
 export interface TraceResponse {
   result: TransactionTrace[];
 }
+
+export interface TransferEvent {
+  token: string;
+  value: string;
+  direction: 'in' | 'out';
+  account: string;
+}

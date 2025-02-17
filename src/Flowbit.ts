@@ -1,5 +1,5 @@
 import { analyzeTransaction } from "./txAnalyzer";
-import { TransactionTrace, TransactionReceipt } from "./types";
+import { TransactionTrace, TransactionReceipt, TransferEvent } from "./types";
 import { JsonRpcClient } from "./JsonRpcClient";
 
 export class Flowbit {
@@ -11,7 +11,7 @@ export class Flowbit {
     }
   }
 
-  async analyze(txid: string) {
+  async analyze(txid: string): Promise<TransferEvent[]> {
     if (!this.rpcClient) {
       throw new Error("Either nodeUrl or traces must be provided.");
     }

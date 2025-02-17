@@ -1,13 +1,6 @@
-import { TransactionTrace, TransactionReceipt } from "./types";
+import { TransactionTrace, TransactionReceipt, TransferEvent } from "./types";
 import { ETH_ADDRESS, TRANSFER_EVENT_SIGNATURE } from "./constants";
 import BigNumber from 'bignumber.js';
-
-interface TransferEvent {
-  token: string;
-  value: string;  // Decimal string
-  direction: 'in' | 'out';
-  account: string;
-}
 
 function hexToDecimal(hex: string): string {
   const cleanHex = hex.replace('0x', '');

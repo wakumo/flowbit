@@ -1,0 +1,1 @@
+{"version":3,"file":"types.d.ts","sourceRoot":"","sources":["../../../../src/__mocks__/transactions/types.ts"],"names":[],"mappings":"AAAA,MAAM,WAAW,eAAe;IAC9B,KAAK,EAAE;QACL,MAAM,EAAE,GAAG,EAAE,CAAC;KACf,CAAC;IACF,OAAO,EAAE;QACP,MAAM,EAAE,GAAG,CAAC;KACb,CAAC;IACF,WAAW,EAAE,MAAM,CAAC;IACpB,iBAAiB,EAAE,MAAM,CAAC;CAC3B"}

@@ -1,0 +1,1 @@
+{"version":3,"file":"Flowbit.d.ts","sourceRoot":"","sources":["../../src/Flowbit.ts"],"names":[],"mappings":"AACA,OAAO,EAAwC,aAAa,EAAE,MAAM,SAAS,CAAC;AAG9E,qBAAa,OAAO;IAClB,OAAO,CAAC,SAAS,CAAC,CAAgB;gBAEtB,OAAO,CAAC,EAAE,MAAM;IAMtB,OAAO,CAAC,IAAI,EAAE,MAAM,GAAG,OAAO,CAAC,aAAa,EAAE,CAAC;YAUvC,oBAAoB;CAInC"}
