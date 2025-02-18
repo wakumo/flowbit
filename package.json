@@ -34,7 +34,7 @@
     "transfer",
     "web3"
   ],
-  "author": "",
+  "author": "Wakumo Vietnam Co., Ltd",
   "license": "MIT",
   "dependencies": {
     "bignumber.js": "^9.1.2"
@@ -49,10 +49,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourusername/flowbit.git"
+    "url": "git+https://github.com/wakumo/flowbit.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/flowbit/issues"
+    "url": "https://github.com/wakumo/flowbit/issues"
   },
-  "homepage": "https://github.com/yourusername/flowbit#readme"
+  "homepage": "https://github.com/wakumo/flowbit#readme"
 }
